@@ -19,7 +19,7 @@ routerify = "1.0"
 routerify-cors = "1.0"
 ```
 
-## Example
+## Example 
 ```rust
 use hyper::{Body, Request, Response, Server};
 use routerify::{Router, RouterService};
