@@ -1,16 +1,23 @@
-use hyper::{Body, Request, Response, Server};
+use hyper::{Body as HyperBody, Request, Response, Server};
 use routerify::{Router, RouterService};
 use routerify_cors::enable_cors_all;
 use std::{convert::Infallible, net::SocketAddr};
+use stream_body::StreamBody;
 
-async fn home_handler(_: Request<Body>) -> Result<Response<Body>, Infallible> {
-    Ok(Response::new(Body::from("Home page")))
+async fn home_handler(_: Request<HyperBody>) -> Result<Response<StreamBody>, Infallible> {
+    Ok(Response::new(StreamBody::from("Home page")))
 }
 
-fn router() -> Router<Body, Infallible> {
+fn router() -> Router<StreamBody, Infallible> {
     Router::builder()
         .middleware(enable_cors_all())
         .get("/", home_handler)
+        .options(
+            "/*",
+            |_req| async move { Ok(Response::new(StreamBody::from("Options"))) },
+        )
+        .any(|_req| async move { Ok(Response::new(StreamBody::from("Not Found"))) })
+        .err_handler(|err| async move { Response::new(StreamBody::from(format!("Error: {}", err))) })
         .build()
         .unwrap()
 }

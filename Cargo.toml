@@ -12,4 +12,9 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-log = "0.4"
+routerify = "1.0"
+hyper = "0.13"
+
+[dev-dependencies]
+tokio = { version = "0.2", features = ["full"] }
+stream-body = "0.1"
