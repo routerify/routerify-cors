@@ -1,6 +1,6 @@
 [package]
 name = "routerify-cors"
-version = "1.0.0"
+version = "1.1.0"
 description = "A Routerify middleware which enables CORS."
 homepage = "https://github.com/routerify/routerify-cors"
 repository = "https://github.com/routerify/routerify-cors"
