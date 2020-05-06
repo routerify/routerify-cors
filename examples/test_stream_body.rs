@@ -26,7 +26,7 @@ fn router() -> Router<StreamBody, Infallible> {
 async fn main() {
     let router = router();
 
-    let service = RouterService::new(router);
+    let service = RouterService::new(router).unwrap();
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3001));
 
