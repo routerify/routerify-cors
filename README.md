@@ -15,8 +15,8 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-routerify = "1.0"
-routerify-cors = "1.0"
+routerify = "1.1"
+routerify-cors = "1.1"
 ```
 
 ## Example

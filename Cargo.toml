@@ -4,7 +4,7 @@ version = "1.0.0"
 description = "A Routerify middleware which enables CORS."
 homepage = "https://github.com/routerify/routerify-cors"
 repository = "https://github.com/routerify/routerify-cors"
-keywords = ["routerify", "cors", "cors-middleware", "hyper-rs", "middleware"]
+keywords = ["routerify", "hyper", "hyper-rs", "cors", "middleware"]
 categories = ["asynchronous", "web-programming", "web-programming::http-server"]
 authors = ["Rousan Ali <hello@rousan.io>"]
 readme = "README.md"
@@ -12,7 +12,7 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-routerify = "1.0"
+routerify = "1.1"
 hyper = "0.13"
 
 [dev-dependencies]
