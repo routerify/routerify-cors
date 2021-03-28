@@ -1,6 +1,6 @@
 [package]
 name = "routerify-cors"
-version = "2.0.0-beta-2"
+version = "2.0.0"
 description = "A Routerify middleware which enables CORS."
 homepage = "https://github.com/routerify/routerify-cors"
 repository = "https://github.com/routerify/routerify-cors"
@@ -12,7 +12,7 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-routerify = { git = "https://github.com/seanpianka/routerify.git", branch = "requestservicebuilder" }
+routerify = "2"
 hyper = "0.14"
 
 [dev-dependencies]
