@@ -1,6 +1,6 @@
 [package]
 name = "routerify-cors"
-version = "1.1.0"
+version = "2.0.0"
 description = "A Routerify middleware which enables CORS."
 homepage = "https://github.com/routerify/routerify-cors"
 repository = "https://github.com/routerify/routerify-cors"
@@ -12,9 +12,8 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-routerify = "1.1"
-hyper = "0.13"
+routerify = "2"
+hyper = "0.14"
 
 [dev-dependencies]
-tokio = { version = "0.2", features = ["full"] }
-stream-body = "0.1"
+tokio = { version = "1", features = ["full"] }
