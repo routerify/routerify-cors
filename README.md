@@ -15,10 +15,10 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-routerify = "1.1"
-routerify-cors = "1.1"
+routerify = "3"
+routerify-cors = "3"
 ```
-
+ 
 ## Example
 
 ```rust
