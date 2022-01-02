@@ -18,7 +18,7 @@ Add this to your `Cargo.toml`:
 routerify = "3"
 routerify-cors = "3"
 ```
-
+ 
 ## Example
 
 ```rust
